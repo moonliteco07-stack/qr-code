@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Something For You ❤️</title>
+<link rel="stylesheet" href="style.css">
+<!-- QRCode.js — reliable, well-known CDN library for generating real, scannable QR codes -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+  <div class="hearts-container" id="heartsContainer"></div>
+
+  <main class="page">
+    <div class="card">
+      <p class="eyebrow">A Surprise, For You</p>
+      <h1 class="title">A Little Something<br>For You ❤️</h1>
+      <p class="subtitle">Made with love, one scan away.</p>
+
+      <div class="url-field">
+        <label for="targetUrl">Message page URL (where message.html is hosted)</label>
+        <input
+          type="text"
+          id="targetUrl"
+          placeholder="https://yourusername.github.io/qr-surprise/message.html"
+        >
+        <p class="url-hint">
+          Paste the live web address of <code>message.html</code> here — not a local
+          <code>localhost</code> link — so a phone can actually open it. See the setup
+          guide below for exactly how to get this link.
+        </p>
+      </div>
+
+      <div class="qr-frame">
+        <div id="qrcode">
+          <p class="qr-placeholder">Your QR code will appear here ✨<br>Enter a link above and press Generate.</p>
+        </div>
+      </div>
+      <p class="scan-label">Scan Me 📱❤️</p>
+
+      <div class="btn-row">
+        <button class="btn" id="generateBtn">Generate QR Code</button>
+        <button class="btn secondary" id="downloadBtn">Download QR Code</button>
+        <button class="btn ghost" id="openBtn">Open Message</button>
+      </div>
+
+      <p class="footnote">
+        Tip: host <code>message.html</code> online first (GitHub Pages works great and is free),
+        then come back and paste that link above to generate a QR code that works from any phone, anywhere.
+      </p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
